@@ -1,211 +1,282 @@
 /* ============== Font family IBM PLEX SANS ============== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 /* ============== Variables de entorno ============== */
 :root {
-    /* ======= Palet color app ======= */
-    --tone-bg-extraBold: #052051;
-    --tone-bg-bold: #072B61;
-    --tone-bg-semiBold: #0A3871;
-    --tone-bg-regular: #356EA9;
-    --tone-bg-light: #609ED4;
-    --tone-bg-extraLight: #F3F5FC;
+  /* ======= Palet color app ======= */
+  --tone-bg-extraBold: #052051;
+  --tone-bg-bold: #072b61;
+  --tone-bg-semiBold: #0a3871;
+  --tone-bg-regular: #356ea9;
+  --tone-bg-light: #609ed4;
+  --tone-bg-extraLight: #f3f5fc;
 
-    --tone-bg-gray2: #343A40;
-    --tone-bg-gray: #495057;
-    --tone-bg-white: white;
+  --tone-bg-gray2: #343a40;
+  --tone-bg-gray: #495057;
+  --tone-bg-white: white;
 
-    /*======= another colors =======*/
-    --tone-bg-blue: #D8DFE8;
+  /*======= another colors =======*/
+  --tone-bg-blue: #d8dfe8;
 
+  /* ======= Font family ======= */
+  --fnt-inter: "Inter", sans-serif;
 
-    /* ======= Font family ======= */
-    --fnt-inter: 'Inter', sans-serif;
-
-    /* ======= Font weigth ======= */
-    --fnt-bold: 700;
-    --fnt-regular: 400;
+  /* ======= Font weigth ======= */
+  --fnt-bold: 700;
+  --fnt-regular: 400;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+::-webkit-scrollbar {
+  width: 0.4rem;
+  background: var(--tone-bg-extraLight);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tone-bg-extraBold);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+    font-weight: var(--fnt-regular);
 }
 
 body {
-    font-family: var(--fnt-inter);
-    background-color: var(--tone-bg-extraLight)
+  font-family: var(--fnt-inter);
+  background-color: var(--tone-bg-extraLight);
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
 }
 
 .container__logo {
-    width: 10%;
-    text-align: center;
+  width: 10%;
+  text-align: center;
 }
 
 .container__logo img {
-    margin-top: 40px;
-    height: 48px;
+  margin-top: 40px;
+  height: 48px;
 }
 
 .container__encripter {
-    width: 50%;
-    margin-top: 9%;
+  width: 50%;
+  margin-top: 9%;
+}
+
+#text_App {
+  border: none;
+  resize: none;
+  background: none;
+  outline: 0;
+  width: 100%;
+  height: 60vh;
+  font-family: var(--fnt-inter);
+  font-weight: var(--fnt-regular);
+  color: var(--tone-bg-semiBold);
+  font-size: 32px;
 }
 
 textarea {
-    border: none;
-    resize: none;
-    background: none;
-    outline: 0;
-    width: 100%;
-    height: 60vh;
-    font-family: var(--fnt-inter);
-    font-weight: var(--fnt-regular);
-    color: var(--tone-bg-semiBold);
-    font-size: 32px;
+  border: none;
+  resize: none;
+  background: none;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--fnt-inter);
+  font-weight: var(--fnt-regular);
+  color: var(--tone-bg-semiBold);
 }
 
 textarea::placeholder {
-    font-weight: var(--fnt-regular);
-    color: var(--tone-bg-semiBold);
-    font-size: 32px;
+  font-weight: var(--fnt-regular);
+  color: var(--tone-bg-semiBold);
+  font-size: 32px;
 }
 
 .aviso {
-    display: flex;
-    align-items: center;
-    color: var(--tone-bg-gray);
+  display: flex;
+  align-items: center;
+  color: var(--tone-bg-gray);
 }
 
 .aviso i {
-    margin-right: 1%;
+  margin-right: 1%;
 }
 
 .container__btn-encripter {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.respons__info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__App {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
-    margin: 3%;
-    width: 50%;
-    height: 62px;
-    border-radius: 24px;
-    color: var(--tone-bg-extraLight);
-    font-size: 16px;
-    font-weight: var(--fnt-regular);
-    cursor: pointer;
-    transition: .3s;
+  margin: 3%;
+  width: 50%;
+  height: 62px;
+  border-radius: 24px;
+  color: var(--tone-bg-extraLight);
+  font-size: 16px;
+  font-weight: var(--fnt-regular);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copy {
+  margin: 3%;
+  width: 100%;
+  height: 62px;
+  border-radius: 24px;
+  color: var(--tone-bg-extraLight);
+  font-size: 16px;
+  font-weight: var(--fnt-regular);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn_1 {
-    background-color: var(--tone-bg-semiBold);
-    border: none;
+  background-color: var(--tone-bg-semiBold);
+  border: none;
 }
 
 .btn_2 {
-    background-color: var(--tone-bg-blue);
-    color: var(--tone-bg-semiBold);
-    border: 1px solid var(--tone-bg-semiBold);
+  background-color: var(--tone-bg-blue);
+  color: var(--tone-bg-semiBold);
+  border: 1px solid var(--tone-bg-semiBold);
+}
+
+.btn_3 {
+  background-color: none;
+  color: var(--tone-bg-semiBold);
+  border: 1px solid var(--tone-bg-semiBold);
 }
 
 .respons {
-    width: 35%;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+  width: 35%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.respons__container {
-    width: 70%;
-    height: 85%;
-    padding: 2rem;
-    background-color: var(--tone-bg-white);
-    box-shadow: 0 24px 32px rgba(0, 0, 0, .08);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+.respons__App {
+  width: 70%;
+  height: 95%;
+  background-color: var(--tone-bg-white);
+  box-shadow: 0 24px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
-.respons__container h2 {
-    color: var(--tone-bg-gray2);
-    margin-bottom: 1rem;
+.respons__App h2 {
+  color: var(--tone-bg-gray2);
+  margin-bottom: 1rem;
 }
 
 .parrafo_general {
-    color: var(--tone-bg-gray);
-    font-size: 1.5rem;
+  color: var(--tone-bg-gray);
+  font-size: 1.5rem;
 }
 
-.respons__container img {
-    width: 90%;
-    margin-bottom: 8%;
+.parrafo {
+  color: var(--tone-bg-gray);
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.respons__App img {
+  width: 90%;
+  margin-bottom: 8%;
 }
 
 /* responsive web design -> */
 /* for mobile devices medium */
 @media screen and (max-width: 1024px) {
-    .btn {
-        width: 100%;
-    }
+  .btn {
+    width: 100%;
+  }
 
-    .container__logo {
-        padding: 0 1.5rem;
-        width: 100%;
-        display: flex;
-        margin-bottom: 5rem;
-    }
+  .container__logo {
+    padding: 0 1.5rem;
+    width: 100%;
+    display: flex;
+    margin-bottom: 5rem;
+  }
 
-    .container__encripter {
-        padding: 0 1.5rem;
-        width: 100%;
-    }
+  .container__encripter {
+    padding: 0 1.5rem;
+    width: 100%;
+  }
 
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .container__btn-encripter {
-        flex-direction: row;
-    }
+  .container__btn-encripter {
+    flex-direction: row;
+  }
 
-    .respons {
-        width: 100%;
-    }
+  .respons {
+    width: 100%;
+  }
 
-    .respons .respons__container img {
-        display: none;
-    }
+  .respons .respons__App img {
+    display: none;
+  }
 
-    .respons__container {
-        margin: 4rem 0 2.5rem;
-        width: 90%;
-        height: auto;
-    }
+  .respons__App {
+    margin: 4rem 0 2.5rem;
+    width: 90%;
+    height: auto;
+  }
 }
 /* for mobile devices small */
 @media screen and (max-width: 475px) {
-    .container__btn-encripter {
-        flex-direction: column;
-    }
+  .container__btn-encripter {
+    flex-direction: column;
+  }
 }

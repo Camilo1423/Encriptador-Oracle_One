@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/main.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <title>Text Encrypter</title>
 </head>
 <body>
@@ -16,24 +17,28 @@
         </div>
         <div class="container__encripter">
             <form>
-                <textarea type="text" class="container__text" placeholder="Ingrese el tecto aquí" required></textarea>
+                <textarea type="text" id="text_App" class="container__text" placeholder="Ingrese el texto aquí" required></textarea>
                 <div class="aviso">
                     <i class='bx bxs-error-alt'></i>
                     <p class="parrafo">Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="container__btn-encripter">
-                    <button class="btn btn_1">Encriptar</button>
-                    <button class="btn btn_2">Desencriptar</button>
+                    <button type="button" class="btn btn_1" id="Encriptar" onclick="encryptText()">Encriptar</button>
+                    <button type="button" class="btn btn_2" id="Desencriptar" onclick="desencryptText()">Desencriptar</button>
                 </div>
             </form>
         </div>
         <div class="respons">
-            <div class="respons__container">
-                <img src="https://res.cloudinary.com/tauro-dev/image/upload/v1660077815/Mu%C3%B1eco_dasbzy.png" alt="" class="img_1">
-                <h2 class="title_2">Ningún mensaje fue encontrado</h2>
-                <p class="parrafo_general">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="respons__App">
+                    <img src="https://res.cloudinary.com/tauro-dev/image/upload/v1660077815/Mu%C3%B1eco_dasbzy.png" alt="" class="img_1">
+                    <h2 class="title_2">Ningún mensaje fue encontrado</h2>
+                    <p class="parrafo_general">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
         </div>
     </div>
+
+    <!-- All Script -->
+    <script src="./assets/main.js"></script>
+    
 </body>
 </html>
