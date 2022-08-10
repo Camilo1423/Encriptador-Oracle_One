@@ -19,25 +19,43 @@ const writeText = (elemento) => {
 }
 
 const encryptText = () => {
-    info.innerHTML = ''
-    const entryInfo = textApp.value.toLowerCase()
-    let transform = entryInfo.replace(/e/igm, "enter")
-    transform = transform.replace(/i/igm, "imes")
-    transform = transform.replace(/a/igm, "ai")
-    transform = transform.replace(/o/igm, "ober")
-    transform = transform.replace(/u/igm, "ufat")
-    writeText(transform)
+    if (textApp.value == '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No has ingresado ningún texto!',
+          })
+    } else {
+        info.innerHTML = ''
+        const entryInfo = textApp.value.toLowerCase()
+        let transform = entryInfo.replace(/e/igm, "enter")
+        transform = transform.replace(/i/igm, "imes")
+        transform = transform.replace(/a/igm, "ai")
+        transform = transform.replace(/o/igm, "ober")
+        transform = transform.replace(/u/igm, "ufat")
+        writeText(transform)
+        textApp.value = ''
+    }
 }
 
 const desencryptText = () => {
-    info.innerHTML = ''
-    const entryInfo = textApp.value.toLowerCase()
-    let transform = entryInfo.replace(/enter/igm, "e")
-    transform = transform.replace(/imes/igm, "i")
-    transform = transform.replace(/ai/igm, "a")
-    transform = transform.replace(/ober/igm, "o")
-    transform = transform.replace(/ufat/igm, "u")
-    writeText(transform)
+    if (textApp.value == '') {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No has ingresado ningún texto!',
+          })
+    } else {
+        info.innerHTML = ''
+        const entryInfo = textApp.value.toLowerCase()
+        let transform = entryInfo.replace(/enter/igm, "e")
+        transform = transform.replace(/imes/igm, "i")
+        transform = transform.replace(/ai/igm, "a")
+        transform = transform.replace(/ober/igm, "o")
+        transform = transform.replace(/ufat/igm, "u")
+        writeText(transform)
+        textApp.value = ''
+    }
 }
 
 // funcion copiar
@@ -59,7 +77,7 @@ on(document, 'click', '#copy', (e) => {
         icon: 'success',
         title: 'Perfecto, has copiado tu texto encriptado',
         showConfirmButton: false,
-        timer: 1500
+        timer: 2500
       })
 })
 
