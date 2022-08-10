@@ -68,7 +68,7 @@ const on = (element, event, selector, handler) => {
   };
 
 on(document, 'click', '#copy', (e) => {
-    const elemento = e.target.parentNode;
+    const elemento = e.target.parentNode
     let content = elemento.firstElementChild
     content.select()
     document.execCommand('copy')
